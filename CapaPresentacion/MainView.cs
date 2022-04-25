@@ -49,9 +49,12 @@ namespace CapaPresentacion
             {
                 formulario = new Mi_main();
                 formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
                 Main_panel.Controls.Add(formulario);
                 Main_panel.Tag = formulario;
                 formulario.Show();
+                formulario.BringToFront();
             }
             else
             {
@@ -62,6 +65,11 @@ namespace CapaPresentacion
         private void btn_ver_visitas_Click(object sender, EventArgs e)
         {
             Cargar_form<Visitas_view>();
+        }
+
+        private void btn_ver_usuarios_Click(object sender, EventArgs e)
+        {
+            Cargar_form<Usuarios_view>();
         }
     }
 }

@@ -60,6 +60,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuarios_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios_view.Designer.cs">
+      <DependentUpon>Usuarios_view.cs</DependentUpon>
+    </Compile>
     <Compile Include="Visitas_view.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Usuarios_view.resx">
+      <DependentUpon>Usuarios_view.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Visitas_view.resx">
       <DependentUpon>Visitas_view.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +108,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{36a173da-0cb4-4318-ae75-b76745fcec70}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaEntiedad\CapaEntidad.csproj">
       <Project>{16ebdc12-8fc6-4723-bdab-9c3ef71c863e}</Project>
       <Name>CapaEntidad</Name>

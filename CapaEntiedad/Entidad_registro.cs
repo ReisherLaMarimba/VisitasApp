@@ -33,6 +33,6 @@ namespace CapaEntiedad
         public DateTime Hora_salida { get => _hora_salida; set => _hora_salida = value; }
         public string Motivo { get => _motivo; set => _motivo = value; }
         
-        public string Objetivo { get => _motivo; set=> _motivo = value; }
+        public string Objetivo { get => _objetivo; set=> _objetivo = value; }
     }
 }

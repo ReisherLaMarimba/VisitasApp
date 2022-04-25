@@ -15,6 +15,11 @@ namespace CapaNegocio
         {
             return objDato.ListRegistro(buscar);
         }
+        public List<Entidad_registro> ListRegistroEdificio(string buscar)
+        {
+            return objDato.ListRegistroEdificio(buscar);
+        }
+
 
         public void insertarRegistro(Entidad_registro Registro)
         {

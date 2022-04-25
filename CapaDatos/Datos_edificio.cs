@@ -18,7 +18,7 @@ namespace CapaDatos
         public List<Entidad_edificio> ListEdificio(string buscar)
         {
             SqlDataReader LectorFilas;
-            SqlCommand cmd = new SqlCommand("Stored_BuscarContacto", conexion);
+            SqlCommand cmd = new SqlCommand("Sp_Buscar_edificio", conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
 
