@@ -41,13 +41,12 @@
             this.table_registro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.table_registro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.table_registro.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.table_registro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table_registro.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.table_registro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table_registro.Location = new System.Drawing.Point(-2, 68);
+            this.table_registro.Location = new System.Drawing.Point(-2, 71);
             this.table_registro.Name = "table_registro";
-            this.table_registro.Size = new System.Drawing.Size(1068, 575);
+            this.table_registro.Size = new System.Drawing.Size(1068, 572);
             this.table_registro.TabIndex = 0;
             // 
             // combo_buscar_edificio

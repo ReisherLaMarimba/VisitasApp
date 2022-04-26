@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class Usuarios_view
+    partial class Roles_view
     {
         /// <summary>
         /// Required designer variable.
@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabla_ver_usario = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_ver_usario)).BeginInit();
+            this.tabla_Ver_roles = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_Ver_roles)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabla_ver_usario
+            // tabla_Ver_roles
             // 
-            this.tabla_ver_usario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabla_Ver_roles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabla_ver_usario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tabla_ver_usario.BackgroundColor = System.Drawing.Color.White;
-            this.tabla_ver_usario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_ver_usario.Location = new System.Drawing.Point(-5, 71);
-            this.tabla_ver_usario.Name = "tabla_ver_usario";
-            this.tabla_ver_usario.Size = new System.Drawing.Size(1073, 575);
-            this.tabla_ver_usario.TabIndex = 0;
+            this.tabla_Ver_roles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabla_Ver_roles.BackgroundColor = System.Drawing.Color.White;
+            this.tabla_Ver_roles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabla_Ver_roles.Location = new System.Drawing.Point(0, 71);
+            this.tabla_Ver_roles.Name = "tabla_Ver_roles";
+            this.tabla_Ver_roles.Size = new System.Drawing.Size(1068, 574);
+            this.tabla_Ver_roles.TabIndex = 0;
             // 
-            // Usuarios_view
+            // Roles_view
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1065, 642);
-            this.Controls.Add(this.tabla_ver_usario);
-            this.Name = "Usuarios_view";
-            this.Text = "Usuarios_view";
-            this.Load += new System.EventHandler(this.Usuarios_view_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_ver_usario)).EndInit();
+            this.Controls.Add(this.tabla_Ver_roles);
+            this.Name = "Roles_view";
+            this.Text = "Roles_view";
+            this.Load += new System.EventHandler(this.Roles_view_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_Ver_roles)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView tabla_ver_usario;
+        private System.Windows.Forms.DataGridView tabla_Ver_roles;
     }
 }

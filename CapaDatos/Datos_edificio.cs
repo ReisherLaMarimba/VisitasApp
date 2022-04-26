@@ -45,8 +45,8 @@ namespace CapaDatos
             SqlCommand cmd = new SqlCommand("Sp_ingresar_edificio", conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
-            cmd.Parameters.AddWithValue("@id_edificio", edificio.Id_edificio);
-            cmd.Parameters.AddWithValue("@NombreEdificio", edificio.NombreEdificio);
+          
+            cmd.Parameters.AddWithValue("@Nombre", edificio.NombreEdificio);
 
 
             cmd.ExecuteNonQuery();

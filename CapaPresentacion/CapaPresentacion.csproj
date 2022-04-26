@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Edificios_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edificios_add.Designer.cs">
+      <DependentUpon>Edificios_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edificios_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edificios_view.Designer.cs">
+      <DependentUpon>Edificios_view.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_view.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roles_view.Designer.cs">
+      <DependentUpon>Roles_view.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios_view.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +90,12 @@
     <Compile Include="Visitas_view.Designer.cs">
       <DependentUpon>Visitas_view.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Edificios_add.resx">
+      <DependentUpon>Edificios_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edificios_view.resx">
+      <DependentUpon>Edificios_view.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login_view.resx">
       <DependentUpon>Login_view.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +112,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Roles_view.resx">
+      <DependentUpon>Roles_view.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuarios_view.resx">
       <DependentUpon>Usuarios_view.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +169,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

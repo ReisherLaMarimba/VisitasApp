@@ -17,7 +17,7 @@ namespace CapaDatos
         public List<Entidad_roles> ListRoles(string buscar)
         {
             SqlDataReader LectorFilas;
-            SqlCommand cmd = new SqlCommand("Stored_BorrarRoles", conexion);
+            SqlCommand cmd = new SqlCommand("Sp_Buscar_roles", conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
 

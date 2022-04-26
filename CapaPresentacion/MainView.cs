@@ -65,11 +65,38 @@ namespace CapaPresentacion
         private void btn_ver_visitas_Click(object sender, EventArgs e)
         {
             Cargar_form<Visitas_view>();
+            label1.Text = ("Menu Visitas");
         }
 
         private void btn_ver_usuarios_Click(object sender, EventArgs e)
         {
             Cargar_form<Usuarios_view>();
+            label1.Text = ("Menu Usuarios");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cargar_form<Roles_view>();
+            label1.Text = ("Menu Roles");
+        }
+
+        private void btn_ver_usuario_Click(object sender, EventArgs e)
+        {
+            Cargar_form<Edificios_view>();
+            label1.Text = ("Menu Edificios");
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Estas seguro de cerrar la aplicacion?", "warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

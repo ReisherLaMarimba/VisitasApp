@@ -49,7 +49,7 @@ namespace CapaPresentacion
 
         private void txt_buscar_TextChanged(object sender, EventArgs e)
         {
-            mostrar(txt_buscar.Text);:
+            mostrar(txt_buscar.Text);
         }
 
         private void combo_buscar_edificio_SelectionChangeCommitted(object sender, EventArgs e)
