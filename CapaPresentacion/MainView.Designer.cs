@@ -45,6 +45,8 @@
             this.Main_panel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btb_ver_add_visita = new System.Windows.Forms.Button();
+            this.btn_ver_aula = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -117,6 +119,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.panel2.Controls.Add(this.btn_ver_aula);
+            this.panel2.Controls.Add(this.btb_ver_add_visita);
             this.panel2.Controls.Add(this.btn_ver_edificio);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btn_ver_usuarios);
@@ -255,6 +259,29 @@
             this.panel4.Size = new System.Drawing.Size(1091, 35);
             this.panel4.TabIndex = 0;
             // 
+            // btb_ver_add_visita
+            // 
+            this.btb_ver_add_visita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btb_ver_add_visita.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btb_ver_add_visita.Location = new System.Drawing.Point(13, 447);
+            this.btb_ver_add_visita.Name = "btb_ver_add_visita";
+            this.btb_ver_add_visita.Size = new System.Drawing.Size(187, 40);
+            this.btb_ver_add_visita.TabIndex = 7;
+            this.btb_ver_add_visita.Text = "Agendar Visita";
+            this.btb_ver_add_visita.UseVisualStyleBackColor = true;
+            // 
+            // btn_ver_aula
+            // 
+            this.btn_ver_aula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ver_aula.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_ver_aula.Location = new System.Drawing.Point(13, 340);
+            this.btn_ver_aula.Name = "btn_ver_aula";
+            this.btn_ver_aula.Size = new System.Drawing.Size(187, 40);
+            this.btn_ver_aula.TabIndex = 8;
+            this.btn_ver_aula.Text = "Ver Aulas";
+            this.btn_ver_aula.UseVisualStyleBackColor = true;
+            this.btn_ver_aula.Click += new System.EventHandler(this.btn_ver_aula_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,5 +327,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btn_ver_aula;
+        private System.Windows.Forms.Button btb_ver_add_visita;
     }
 }

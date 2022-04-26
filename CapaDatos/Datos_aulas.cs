@@ -39,6 +39,19 @@ namespace CapaDatos
             return listar;
         }
 
+        public DataTable cargarCombo()
+        {
+            SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["Conectar"].ConnectionString);
+
+            SqlDataAdapter da = new SqlDataAdapter("Sp_Buscar_registro_visitantes_edificio_combo", conexion);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dataedificio = new DataTable();
+            da.Fill(dataedificio);
+            conexion.Open();
+            return dataedificio;
+        }
+
+
         public void insertaraula(Entidad_aulas aula)
         {
             SqlCommand cmd = new SqlCommand("Sp_ingresar_aula", conexion);

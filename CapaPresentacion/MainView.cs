@@ -98,5 +98,11 @@ namespace CapaPresentacion
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btn_ver_aula_Click(object sender, EventArgs e)
+        {
+            Cargar_form<Aulas_view>();
+            label1.Text = ("Menu Aulas");
+        }
     }
 }
