@@ -10,6 +10,9 @@ namespace CapaNegocio
     public class Negocio_edificio
     {
        Datos_edificio objDato = new Datos_edificio();
+       
+     
+
 
         public List<Entidad_edificio> ListEdificio(string buscar)
         {

@@ -37,6 +37,8 @@
             this.btn_edit = new System.Windows.Forms.PictureBox();
             this.btn_update = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_nombre_Edificio = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_ver_edificio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_borrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_edit)).BeginInit();
@@ -52,9 +54,9 @@
             this.tabla_ver_edificio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabla_ver_edificio.BackgroundColor = System.Drawing.Color.White;
             this.tabla_ver_edificio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_ver_edificio.Location = new System.Drawing.Point(-3, 71);
+            this.tabla_ver_edificio.Location = new System.Drawing.Point(-3, 185);
             this.tabla_ver_edificio.Name = "tabla_ver_edificio";
-            this.tabla_ver_edificio.Size = new System.Drawing.Size(1069, 574);
+            this.tabla_ver_edificio.Size = new System.Drawing.Size(552, 460);
             this.tabla_ver_edificio.TabIndex = 0;
             // 
             // label1
@@ -69,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 9);
+            this.label2.Location = new System.Drawing.Point(46, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 6;
@@ -78,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(209, 9);
+            this.label3.Location = new System.Drawing.Point(134, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 8;
@@ -87,7 +89,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(278, 8);
+            this.label4.Location = new System.Drawing.Point(125, 87);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 10;
@@ -97,18 +99,19 @@
             // 
             this.btn_borrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_borrar.Image = global::CapaPresentacion.Properties.Resources.delete;
-            this.btn_borrar.Location = new System.Drawing.Point(258, 24);
+            this.btn_borrar.Location = new System.Drawing.Point(105, 103);
             this.btn_borrar.Name = "btn_borrar";
             this.btn_borrar.Size = new System.Drawing.Size(54, 41);
             this.btn_borrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_borrar.TabIndex = 9;
             this.btn_borrar.TabStop = false;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // btn_edit
             // 
             this.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_edit.Image = global::CapaPresentacion.Properties.Resources.edit;
-            this.btn_edit.Location = new System.Drawing.Point(180, 24);
+            this.btn_edit.Location = new System.Drawing.Point(105, 24);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(54, 41);
             this.btn_edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -120,7 +123,7 @@
             // 
             this.btn_update.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_update.Image = global::CapaPresentacion.Properties.Resources.sync;
-            this.btn_update.Location = new System.Drawing.Point(96, 24);
+            this.btn_update.Location = new System.Drawing.Point(14, 103);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(54, 41);
             this.btn_update.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -140,11 +143,31 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // txt_nombre_Edificio
+            // 
+            this.txt_nombre_Edificio.Location = new System.Drawing.Point(221, 88);
+            this.txt_nombre_Edificio.Multiline = true;
+            this.txt_nombre_Edificio.Name = "txt_nombre_Edificio";
+            this.txt_nombre_Edificio.Size = new System.Drawing.Size(169, 32);
+            this.txt_nombre_Edificio.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(221, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Nombre del Edificio";
+            // 
             // Edificios_view
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 642);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(548, 642);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txt_nombre_Edificio);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btn_borrar);
             this.Controls.Add(this.label3);
@@ -178,5 +201,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox btn_borrar;
+        private System.Windows.Forms.TextBox txt_nombre_Edificio;
+        private System.Windows.Forms.Label label5;
     }
 }

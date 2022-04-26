@@ -61,7 +61,7 @@ namespace CapaDatos
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
             cmd.Parameters.AddWithValue("@id_edificio", edificio.Id_edificio);
-            cmd.Parameters.AddWithValue("@NombreEdificio", edificio.NombreEdificio);
+            cmd.Parameters.AddWithValue("@Nombre", edificio.NombreEdificio);
 
 
             cmd.ExecuteNonQuery();
