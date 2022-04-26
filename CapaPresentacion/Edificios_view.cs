@@ -113,11 +113,12 @@ namespace CapaPresentacion
             {
                 objentidad.Id_edificio = Convert.ToInt32(tabla_ver_edificio.CurrentRow.Cells [0].Value.ToString());
                 objnegocio.EliminarEdificio(objentidad);
-                MessageBox.Show("Elimado");
+                MessageBox.Show("El edificio se ha borrado correctamente");
+                mostrar("");
             }
             else
             {
-                MessageBox.Show("no se pude");
+                MessageBox.Show("no se puede borrar este registro");
             }
         }
     }

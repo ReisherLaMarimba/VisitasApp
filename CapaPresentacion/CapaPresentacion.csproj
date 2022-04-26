@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Edificios_add.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edificios_add.Designer.cs">
-      <DependentUpon>Edificios_add.cs</DependentUpon>
-    </Compile>
     <Compile Include="Edificios_view.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,9 +84,6 @@
     <Compile Include="Visitas_view.Designer.cs">
       <DependentUpon>Visitas_view.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Edificios_add.resx">
-      <DependentUpon>Edificios_add.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Edificios_view.resx">
       <DependentUpon>Edificios_view.cs</DependentUpon>
     </EmbeddedResource>

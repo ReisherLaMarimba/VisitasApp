@@ -9,9 +9,10 @@ using System.Data;
 using CapaDatos;
     using CapaEntiedad;
 
+
 namespace CapaDatos
 {
-    public class Datos_usuario
+    public  class Datos_usuario
     {
         SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["Conectar"].ConnectionString);
 
@@ -42,6 +43,18 @@ namespace CapaDatos
             conexion.Close();
             LectorFilas.Close();
             return listar;
+        }
+
+        public DataTable cargarRoles()
+        {
+            SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["Conectar"].ConnectionString);
+
+            SqlDataAdapter da = new SqlDataAdapter("Sp_Buscar_Usuario_combo", conexion);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable datausuario = new DataTable();
+            da.Fill(datausuario);
+            conexion.Open();
+            return datausuario;
         }
 
         public void insertarUsuario(Entidad_usuarios usuarios)
@@ -75,6 +88,8 @@ namespace CapaDatos
             cmd.ExecuteNonQuery();
             conexion.Close();
         }
+
+       
 
         public void EliminarUsuario(Entidad_usuarios usuarios)
         {
