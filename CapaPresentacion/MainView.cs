@@ -29,7 +29,7 @@ namespace CapaPresentacion
             label_name_user.Text = CacheLogin.nombreUser;
             label_rol.Text = CacheLogin.id_roles.ToString();
 
-            if(CacheLogin.id_roles == 1)
+            if(CacheLogin.id_roles == 2)
             {
                 label_rol.Text = "Admin";
             }
