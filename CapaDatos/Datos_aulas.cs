@@ -43,7 +43,7 @@ namespace CapaDatos
         {
             SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["Conectar"].ConnectionString);
 
-            SqlDataAdapter da = new SqlDataAdapter("Sp_Buscar_registro_visitantes_edificio_combo", conexion);
+            SqlDataAdapter da = new SqlDataAdapter("buscar_aulas_combo", conexion);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable dataedificio = new DataTable();
             da.Fill(dataedificio);

@@ -106,7 +106,7 @@ namespace CapaDatos
           cmd.Parameters.AddWithValue("@edificio", registro.Edificio);
             cmd.Parameters.AddWithValue("@aula", registro.Aula);
             cmd.Parameters.AddWithValue("@hora_entrada", registro.Hora_entrada);
-            cmd.Parameters.AddWithValue("@ehora_salida", registro.Hora_salida);
+            cmd.Parameters.AddWithValue("@hora_salida", registro.Hora_salida);
             cmd.Parameters.AddWithValue("@motivo", registro.Motivo);
             cmd.Parameters.AddWithValue("@objetivo", registro.Objetivo);
             cmd.ExecuteNonQuery();
@@ -119,6 +119,7 @@ namespace CapaDatos
             SqlCommand cmd = new SqlCommand("Stored_EditarContacto", conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
+            cmd.Parameters.AddWithValue("@id_user", registro.Id_user);
             cmd.Parameters.AddWithValue("@Nombre", registro.Nombre);
             cmd.Parameters.AddWithValue("@Apellido", registro.Apellido);
             cmd.Parameters.AddWithValue("@carrera", registro.Carrera);
@@ -126,7 +127,7 @@ namespace CapaDatos
             cmd.Parameters.AddWithValue("@edificio", registro.Edificio);
             cmd.Parameters.AddWithValue("@aula", registro.Aula);
             cmd.Parameters.AddWithValue("@hora_entrada", registro.Hora_entrada);
-            cmd.Parameters.AddWithValue("@ehora_salida", registro.Hora_salida);
+            cmd.Parameters.AddWithValue("@hora_salida", registro.Hora_salida);
             cmd.Parameters.AddWithValue("@motivo", registro.Motivo);
             cmd.Parameters.AddWithValue("@objetivo", registro.Objetivo);
 
