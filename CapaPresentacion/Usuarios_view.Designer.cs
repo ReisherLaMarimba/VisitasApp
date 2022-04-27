@@ -139,6 +139,7 @@
             this.btn_update.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_update.TabIndex = 12;
             this.btn_update.TabStop = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // pictureBox1
             // 

@@ -76,6 +76,7 @@
             this.btn_borrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_borrar.TabIndex = 25;
             this.btn_borrar.TabStop = false;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // label3
             // 
@@ -96,6 +97,7 @@
             this.btn_edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_edit.TabIndex = 23;
             this.btn_edit.TabStop = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // label2
             // 
@@ -125,6 +127,7 @@
             this.btn_update.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_update.TabIndex = 20;
             this.btn_update.TabStop = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // pictureBox1
             // 
@@ -136,6 +139,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label5
             // 
@@ -190,6 +194,7 @@
             this.Controls.Add(this.tabla_aulas);
             this.Name = "Aulas_view";
             this.Text = "Aulas_view";
+            this.Load += new System.EventHandler(this.Aulas_view_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabla_aulas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_borrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_edit)).EndInit();

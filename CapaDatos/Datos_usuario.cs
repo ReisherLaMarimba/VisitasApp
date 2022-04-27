@@ -49,7 +49,7 @@ namespace CapaDatos
         {
             SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["Conectar"].ConnectionString);
 
-            SqlDataAdapter da = new SqlDataAdapter("Sp_Buscar_Usuario_combo", conexion);
+            SqlDataAdapter da = new SqlDataAdapter("Sp_Buscar_Usuario_roles", conexion);
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             DataTable datausuario = new DataTable();
             da.Fill(datausuario);
@@ -78,6 +78,7 @@ namespace CapaDatos
             SqlCommand cmd = new SqlCommand("Sp_editar_usuario", conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
+            cmd.Parameters.AddWithValue("@userid", usuarios.User_id);
             cmd.Parameters.AddWithValue("@loginName", usuarios.LoginName);
             cmd.Parameters.AddWithValue("@password", usuarios.Password);
             cmd.Parameters.AddWithValue("@nombre", usuarios.NombreUser);

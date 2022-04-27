@@ -65,12 +65,13 @@ namespace CapaPresentacion
                     objEntidad.Password =  txt_pass.Text.ToUpper();
                     objEntidad.NombreUser = txt_name.Text.ToUpper();
                     objEntidad.Apellido =  txt_lastName.Text.ToUpper();
-                    objEntidad.Id_roles = combo_rol.SelectedIndex ;
+                    objEntidad.Id_roles = Convert.ToInt32(combo_rol.SelectedValue);
                     objEntidad.Fecha_nacimientoUser = Convert.ToDateTime(data_nacimiento.Text);
                     objNegocio.insertarUsuario(objEntidad);
                     MessageBox.Show("Usuario agregado correctamente");
                     mostrar("");
                     limpiar();
+
                 }catch (Exception ex)
                 {
                     MessageBox.Show("No se pudo guardar el usuario "+ ex);
@@ -86,10 +87,11 @@ namespace CapaPresentacion
                     objEntidad.Password = txt_pass.Text.ToUpper();
                     objEntidad.NombreUser = txt_name.Text.ToUpper();
                     objEntidad.Apellido = txt_lastName.Text.ToUpper();
-                    objEntidad.Id_roles = combo_rol.SelectedIndex;
+                    objEntidad.Id_roles = combo_rol.SelectedIndex+1;
                     objEntidad.Fecha_nacimientoUser = Convert.ToDateTime(data_nacimiento.Text);
                     objNegocio.EditarUsuario(objEntidad);
                     MessageBox.Show("Se edito el registro correctamente");
+                    
                     mostrar("");
                     limpiar();
                 }catch(Exception ex)
@@ -131,6 +133,12 @@ namespace CapaPresentacion
                 MessageBox.Show("Registro Eliminado");
                 mostrar("");
             }
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            mostrar("");
+            limpiar();
         }
     }
 }
