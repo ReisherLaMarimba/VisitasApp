@@ -34,8 +34,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_ver_aula = new System.Windows.Forms.Button();
             this.btn_ver_edificio = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ver_roles = new System.Windows.Forms.Button();
             this.btn_ver_usuarios = new System.Windows.Forms.Button();
             this.btn_ver_visitas = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -45,8 +46,6 @@
             this.Main_panel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btb_ver_add_visita = new System.Windows.Forms.Button();
-            this.btn_ver_aula = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -120,9 +119,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
             this.panel2.Controls.Add(this.btn_ver_aula);
-            this.panel2.Controls.Add(this.btb_ver_add_visita);
             this.panel2.Controls.Add(this.btn_ver_edificio);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btn_ver_roles);
             this.panel2.Controls.Add(this.btn_ver_usuarios);
             this.panel2.Controls.Add(this.btn_ver_visitas);
             this.panel2.Controls.Add(this.btn_logout);
@@ -132,6 +130,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 633);
             this.panel2.TabIndex = 0;
+            // 
+            // btn_ver_aula
+            // 
+            this.btn_ver_aula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ver_aula.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_ver_aula.Location = new System.Drawing.Point(13, 340);
+            this.btn_ver_aula.Name = "btn_ver_aula";
+            this.btn_ver_aula.Size = new System.Drawing.Size(187, 40);
+            this.btn_ver_aula.TabIndex = 8;
+            this.btn_ver_aula.Text = "Ver Aulas";
+            this.btn_ver_aula.UseVisualStyleBackColor = true;
+            this.btn_ver_aula.Click += new System.EventHandler(this.btn_ver_aula_Click);
             // 
             // btn_ver_edificio
             // 
@@ -145,17 +155,17 @@
             this.btn_ver_edificio.UseVisualStyleBackColor = true;
             this.btn_ver_edificio.Click += new System.EventHandler(this.btn_ver_usuario_Click);
             // 
-            // button1
+            // btn_ver_roles
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(12, 248);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 40);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Ver Roles";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_ver_roles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ver_roles.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_ver_roles.Location = new System.Drawing.Point(12, 248);
+            this.btn_ver_roles.Name = "btn_ver_roles";
+            this.btn_ver_roles.Size = new System.Drawing.Size(187, 40);
+            this.btn_ver_roles.TabIndex = 5;
+            this.btn_ver_roles.Text = "Ver Roles";
+            this.btn_ver_roles.UseVisualStyleBackColor = true;
+            this.btn_ver_roles.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_ver_usuarios
             // 
@@ -259,29 +269,6 @@
             this.panel4.Size = new System.Drawing.Size(1091, 35);
             this.panel4.TabIndex = 0;
             // 
-            // btb_ver_add_visita
-            // 
-            this.btb_ver_add_visita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btb_ver_add_visita.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btb_ver_add_visita.Location = new System.Drawing.Point(13, 447);
-            this.btb_ver_add_visita.Name = "btb_ver_add_visita";
-            this.btb_ver_add_visita.Size = new System.Drawing.Size(187, 40);
-            this.btb_ver_add_visita.TabIndex = 7;
-            this.btb_ver_add_visita.Text = "Agendar Visita";
-            this.btb_ver_add_visita.UseVisualStyleBackColor = true;
-            // 
-            // btn_ver_aula
-            // 
-            this.btn_ver_aula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ver_aula.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_ver_aula.Location = new System.Drawing.Point(13, 340);
-            this.btn_ver_aula.Name = "btn_ver_aula";
-            this.btn_ver_aula.Size = new System.Drawing.Size(187, 40);
-            this.btn_ver_aula.TabIndex = 8;
-            this.btn_ver_aula.Text = "Ver Aulas";
-            this.btn_ver_aula.UseVisualStyleBackColor = true;
-            this.btn_ver_aula.Click += new System.EventHandler(this.btn_ver_aula_Click);
-            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,7 +307,7 @@
         private System.Windows.Forms.Button btn_ver_visitas;
         private System.Windows.Forms.Panel Main_panel;
         private System.Windows.Forms.Button btn_ver_usuarios;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ver_roles;
         private System.Windows.Forms.Button btn_ver_edificio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -328,6 +315,5 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btn_ver_aula;
-        private System.Windows.Forms.Button btb_ver_add_visita;
     }
 }

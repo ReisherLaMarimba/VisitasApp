@@ -33,11 +33,23 @@ namespace CapaPresentacion
             {
                 label_rol.Text = "Admin";
             }
+            else
+            {
+                label_rol.Text = "Usuario Comun";
+            }
         }
 
         private void MainView_Load(object sender, EventArgs e)
         {
             cargar_datos_usuario();
+
+            if(CacheLogin.id_roles != 1)
+            {
+                btn_ver_aula.Visible = false;
+                btn_ver_edificio.Visible = false;
+                btn_ver_usuarios.Visible = false;
+                btn_ver_roles.Visible = false;
+            }
         }
 
 

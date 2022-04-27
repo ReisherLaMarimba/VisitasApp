@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocio;
 using CapaDatos;
+using Capa_Comun;
 using CapaEntiedad;
 namespace CapaPresentacion
 {
@@ -46,6 +47,15 @@ namespace CapaPresentacion
 
             Hora_salida.CustomFormat = "yyyy-MM-dd";
             Hora_salida.Format = DateTimePickerFormat.Custom;
+
+
+            if(CacheLogin.Userid != 1)
+            {
+                pictureBox1.Visible = false;
+                btn_borrar.Visible = false;
+                btn_edit.Visible = false;
+                btn_update.Visible = false;
+            }
 
         }
 
@@ -100,10 +110,10 @@ namespace CapaPresentacion
                     objEntidad.Apellido = txt_apellido_visitante.Text.ToUpper();
                     objEntidad.Carrera = txt_carrera.Text.ToUpper();
                     objEntidad.Correo = txt_correo.Text.ToUpper();
-                    objEntidad.Edificio = combo_edificio.DisplayMember.ToString();
+                    objEntidad.Edificio = combo_edificio.ValueMember.ToString();
                     objEntidad.Motivo = txt_motivo.Text.ToUpper();
                     objEntidad.Objetivo = txt_obj.Text.ToUpper();
-                    objEntidad.Aula = comboAula.DisplayMember.ToString();
+                    objEntidad.Aula = comboAula.ValueMember.ToString();
                     objEntidad.Hora_entrada = Convert.ToDateTime(hora_entrada.Text);
                     objEntidad.Hora_salida = Convert.ToDateTime(Hora_salida.Text);
                     objNegocio.insertarRegistro(objEntidad);
@@ -122,14 +132,14 @@ namespace CapaPresentacion
             {
                 try
                 {
-                    objEntidad.Id_user = Convert.ToInt32(id_user);
+                    objEntidad.Id_user= Convert.ToInt32(id_user);
                     objEntidad.Nombre = txt_name.Text.ToUpper();
                     objEntidad.Apellido = txt_apellido_visitante.Text.ToUpper();
                     objEntidad.Carrera = txt_carrera.Text.ToUpper();
                     objEntidad.Correo = txt_correo.Text.ToUpper();
                     objEntidad.Motivo = txt_motivo.Text.ToUpper();
-                    objEntidad.Edificio = combo_edificio.DisplayMember.ToString();
-                    objEntidad.Aula = comboAula.DisplayMember.ToString();
+                    objEntidad.Edificio = combo_edificio.ValueMember.ToString();
+                    objEntidad.Aula = comboAula.ValueMember.ToString();
                     objEntidad.Objetivo = txt_obj.Text.ToUpper();
                     objEntidad.Hora_entrada = Convert.ToDateTime(hora_entrada.Text);
                     objEntidad.Hora_salida = Convert.ToDateTime(Hora_salida.Value);
@@ -157,14 +167,17 @@ namespace CapaPresentacion
                 txt_apellido_visitante.Text = table_registro.CurrentRow.Cells[2].Value.ToString();
                 txt_carrera.Text = table_registro.CurrentRow.Cells[3].Value.ToString();
                 txt_correo.Text = table_registro.CurrentRow.Cells[4].Value.ToString();
-                txt_motivo.Text = table_registro.CurrentRow.Cells[5].Value.ToString();
-                combo_edificio.SelectedItem = table_registro.CurrentRow.Cells[6].Value.ToString();
-                comboAula.SelectedItem = table_registro.CurrentRow.Cells[7].Value.ToString();
-                txt_obj.Text = table_registro.CurrentRow.Cells[8].Value.ToString();
-                Hora_salida.Text = table_registro.CurrentRow.Cells[9].Value.ToString();
-                hora_entrada.Text = table_registro.CurrentRow.Cells[10].Value.ToString();
-              
-            
+                combo_edificio.SelectedItem = table_registro.CurrentRow.Cells[5].Value.ToString();
+                comboAula.SelectedItem = table_registro.CurrentRow.Cells[6].Value.ToString();
+                hora_entrada.Text = table_registro.CurrentRow.Cells[7].Value.ToString();
+                Hora_salida.Text = table_registro.CurrentRow.Cells[8].Value.ToString();
+                txt_obj.Text = table_registro.CurrentRow.Cells[9].Value.ToString();
+
+                txt_motivo.Text = table_registro.CurrentRow.Cells[10].Value.ToString();
+                
+
+
+
             }
             else
             {

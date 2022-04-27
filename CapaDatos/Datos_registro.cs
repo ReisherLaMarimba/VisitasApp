@@ -29,17 +29,16 @@ namespace CapaDatos
                 listar.Add(new Entidad_registro
                 {
                     Id_user = lectorFilas.GetInt32(0),
-                    CodigoRegistro = lectorFilas.GetString(1),
-                    Nombre = lectorFilas.GetString(2),
-                    Apellido = lectorFilas.GetString(3),
-                    Carrera = lectorFilas.GetString(4),
-                    Correo = lectorFilas.GetString(5),
-                    Edificio = lectorFilas.GetString(6),
-                    Aula = lectorFilas.GetString(7),
-                    Hora_entrada = lectorFilas.GetDateTime(8),
-                    Hora_salida = lectorFilas.GetDateTime(9),   
-                    Motivo = lectorFilas.GetString(10),
-                    Objetivo = lectorFilas.GetString(11),
+                    Nombre = lectorFilas.GetString(1),
+                    Apellido = lectorFilas.GetString(2),
+                    Carrera = lectorFilas.GetString(3),
+                    Correo = lectorFilas.GetString(4),
+                    Edificio = lectorFilas.GetString(5),
+                    Aula = lectorFilas.GetString(6),
+                    Hora_entrada = lectorFilas.GetDateTime(7),
+                    Hora_salida = lectorFilas.GetDateTime(8),   
+                    Motivo = lectorFilas.GetString(9),
+                    Objetivo = lectorFilas.GetString(10),
                 });
             }
             conexion.Close();
@@ -62,17 +61,17 @@ namespace CapaDatos
                 listar.Add(new Entidad_registro
                 {
                     Id_user = lectorFilas.GetInt32(0),
-                    CodigoRegistro = lectorFilas.GetString(1),
-                    Nombre = lectorFilas.GetString(2),
-                    Apellido = lectorFilas.GetString(3),
-                    Carrera = lectorFilas.GetString(4),
-                    Correo = lectorFilas.GetString(5),
-                    Edificio = lectorFilas.GetString(6),
-                    Aula = lectorFilas.GetString(7),
-                    Hora_entrada = lectorFilas.GetDateTime(8),
-                    Hora_salida = lectorFilas.GetDateTime(9),
-                    Motivo = lectorFilas.GetString(10),
-                    Objetivo = lectorFilas.GetString(11),
+                    
+                    Nombre = lectorFilas.GetString(1),
+                    Apellido = lectorFilas.GetString(2),
+                    Carrera = lectorFilas.GetString(3),
+                    Correo = lectorFilas.GetString(4),
+                    Edificio = lectorFilas.GetString(5),
+                    Aula = lectorFilas.GetString(6),
+                    Hora_entrada = lectorFilas.GetDateTime(7),
+                    Hora_salida = lectorFilas.GetDateTime(8),
+                    Motivo = lectorFilas.GetString(9),
+                    Objetivo = lectorFilas.GetString(10),
                 });
             }
             conexion.Close();
@@ -116,7 +115,7 @@ namespace CapaDatos
 
         public void EditarRegistro(Entidad_registro registro)
         {
-            SqlCommand cmd = new SqlCommand("Stored_EditarContacto", conexion);
+            SqlCommand cmd = new SqlCommand("[Sp_editar_registro_visitante]", conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
             cmd.Parameters.AddWithValue("@id_user", registro.Id_user);

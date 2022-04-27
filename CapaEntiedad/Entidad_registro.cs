@@ -10,7 +10,7 @@ namespace CapaEntiedad
     {
 
         private int _Id_user;
-        private string _CodigoRegistro;
+       
         private string _Nombre;
         private string _Apellido;
         private string _Carrera;
@@ -22,7 +22,7 @@ namespace CapaEntiedad
         private string _motivo;
         private string _objetivo;
         public int Id_user { get => _Id_user; set => _Id_user = value; }
-        public string CodigoRegistro { get => _CodigoRegistro; set => _CodigoRegistro = value; }
+     
         public string Nombre { get => _Nombre; set => _Nombre = value; }
         public string Apellido { get => _Apellido; set => _Apellido = value; }
         public string Carrera { get => _Carrera; set => _Carrera = value; }
