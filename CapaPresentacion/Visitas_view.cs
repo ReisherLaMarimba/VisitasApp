@@ -49,7 +49,7 @@ namespace CapaPresentacion
             Hora_salida.Format = DateTimePickerFormat.Custom;
 
 
-            if(CacheLogin.Userid != 2)
+            if(CacheLogin.Userid != 1)
             {
                 pictureBox1.Visible = false;
                 btn_borrar.Visible = false;
